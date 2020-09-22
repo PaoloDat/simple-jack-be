@@ -8,7 +8,7 @@ spring:
     password: jackpot
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
   jackson:
     date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
 
