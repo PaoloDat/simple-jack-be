@@ -27,11 +27,6 @@ public class InitLoading implements CommandLineRunner {
 
   private void initLoading() {
 
-    loadGermany();
-
-
-
-
 
   }
 

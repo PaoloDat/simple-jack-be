@@ -1,8 +1,10 @@
 package ge.vazisu.simplejack.controller;
 
 import ge.vazisu.simplejack.dto.CountryDto;
+import ge.vazisu.simplejack.dto.CriterionDto;
 import ge.vazisu.simplejack.dto.LeagueDto;
 import ge.vazisu.simplejack.dto.TeamDto;
+import ge.vazisu.simplejack.enums.Criterion;
 import ge.vazisu.simplejack.service.CountryService;
 import ge.vazisu.simplejack.service.LeagueService;
 import ge.vazisu.simplejack.service.TeamService;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -42,5 +45,10 @@ public class InfoController {
   public List<TeamDto> getTeamsByCountryAndLeague(@PathVariable("countryId") Long countryId,
                                                   @PathVariable("leagueId") Long leagueId) {
     return teamService.getTeamsByCountryAndLeague(countryId, leagueId);
+  }
+
+  @GetMapping("/criteria")
+  public Map<Integer, List<CriterionDto>> getCriteria() {
+    return Criterion.getCriteria();
   }
 }
