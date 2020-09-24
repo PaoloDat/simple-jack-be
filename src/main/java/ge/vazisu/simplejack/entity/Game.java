@@ -26,13 +26,15 @@ public class Game {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+  private Integer drawNumber;
 
   private Long countryId;
   private Long leagueId;
-  private Long teamId;
+  private Long homeTeamId;
+  private Long awayTeamId;
 
-  private int homeScore;
-  private int awayScore;
+  private Integer homeScore;
+  private Integer awayScore;
 
   private double fonHome;
   private double fonDraw;

@@ -26,21 +26,19 @@ public class InitLoading implements CommandLineRunner {
   }
 
   private void initLoading() {
-
-
+//    loadEngland();
+//    loadGermany();
   }
 
   private void loadGermany() {
     Country germany = new Country().setName("Deutschland");
     countryRepository.save(germany);
 
-    League cup = new League().setName("Cup").setCountry(germany);
     League bundesliga = new League().setName("Bundesliga").setCountry(germany);
     League bundesliga2 = new League().setName("2. Bundesliga").setCountry(germany);
 
 
     List<League> leagues = List.of(
-            cup,
             bundesliga,
             bundesliga2
 
@@ -95,16 +93,12 @@ public class InitLoading implements CommandLineRunner {
     Country england = new Country().setName("England");
     countryRepository.save(england);
 
-    League englandCup = new League().setName("Cup").setCountry(england);
-    League englandLeagueCup = new League().setName("League Cup").setCountry(england);
     League englandPremiereLeague = new League().setName("Premier League").setCountry(england);
     League championship = new League().setName("Championship").setCountry(england);
     League leagueOne = new League().setName("League One").setCountry(england);
     League leagueTwo = new League().setName("League Two").setCountry(england);
 
     List<League> leagues = List.of(
-            englandCup,
-            englandLeagueCup,
             englandPremiereLeague,
             championship,
             leagueOne,
