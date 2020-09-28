@@ -18,6 +18,10 @@ public class GameDto {
   private Long homeTeamId;
   private Long awayTeamId;
 
+  private String homeTeam;
+  private String awayTeam;
+
+
   private Integer homeScore;
   private Integer awayScore;
 
